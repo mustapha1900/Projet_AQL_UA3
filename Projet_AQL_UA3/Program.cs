@@ -57,7 +57,7 @@ namespace Projet_AQL_UA3
 
             Etudiant etudiant = new Etudiant(numero, nom, prenom);
             gestionnaire.AjouterEtudiant(etudiant);
-            Console.WriteLine("Étudiant ajouté avec succès.");
+            Console.WriteLine("Etudiant ajouté avec succès.");
         }
 
         static void AjouterCours(GestionnaireNotes gestionnaire)
