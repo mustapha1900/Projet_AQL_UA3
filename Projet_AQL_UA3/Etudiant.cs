@@ -8,9 +8,9 @@ namespace Projet_AQL_UA3
 {
     public class Etudiant
     {
-        public int NumeroEtudiant { get; }
-        public string Nom { get; }
-        public string Prenom { get; }
+        public int NumeroEtudiant { get;set; }
+        public string Nom { get;set; }
+        public string Prenom { get; set;}
 
         public Etudiant(int numeroEtudiant, string nom, string prenom)
         {
