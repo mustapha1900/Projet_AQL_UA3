@@ -13,29 +13,29 @@ namespace Projet_AQL_UA3
         private List<Cours> LesCours = new List<Cours>();
         private List<Notes> LesNotes = new List<Notes>();
 
-        public void AjouterEtudiant(Etudiant etudiant)
+        public void ajouterEtudiant(Etudiant etudiant)
         {
             LesEtudiants.Add(etudiant);
         }
 
-        public void AjouterCours(Cours cours)
+        public void ajouterCours(Cours cours)
         {
             LesCours.Add(cours);
         }
 
-        public void AjouterNote(Notes note)
+        public void ajouterNote(Notes note)
         {
             LesNotes.Add(note);
         }
 
-        public void EnregistrerDonnees()
+        public void enregistrerDonnees()
         {
-            EnregistrerEtudiants();
-            EnregistrerCours();
-            EnregistrerNotes();
+            enregistrerEtudiants();
+            enregistrerCours();
+            enregistrerNotes();
         }
 
-        private void EnregistrerEtudiants()
+        private void enregistrerEtudiants()
         {
             foreach (Etudiant etudiant in LesEtudiants)
             {
@@ -49,7 +49,7 @@ namespace Projet_AQL_UA3
             }
         }
 
-        private void EnregistrerCours()
+        private void enregistrerCours()
         {
             foreach (Cours cours in LesCours)
             {
@@ -63,7 +63,7 @@ namespace Projet_AQL_UA3
             }
         }
 
-        private void EnregistrerNotes()
+        private void enregistrerNotes()
         {
             foreach (Notes note in LesNotes)
             {
@@ -75,7 +75,7 @@ namespace Projet_AQL_UA3
             }
         }
 
-        public void AfficherReleveNotes(int numeroEtudiant)
+        public void afficherReleveNotes(int numeroEtudiant)
         {
             Console.WriteLine($"Relevé de notes pour l'étudiant numéro {numeroEtudiant}:");
             foreach (Notes note in LesNotes)
@@ -88,3 +88,4 @@ namespace Projet_AQL_UA3
         }
     }
 }
+

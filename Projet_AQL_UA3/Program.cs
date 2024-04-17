@@ -25,19 +25,19 @@ namespace Projet_AQL_UA3
                 switch (choix)
                 {
                     case "1":
-                        AjouterEtudiant(gestionnaire);
+                        ajouterEtudiant(gestionnaire);
                         break;
                     case "2":
-                        AjouterCours(gestionnaire);
+                        ajouterCours(gestionnaire);
                         break;
                     case "3":
-                        SaisirNote(gestionnaire);
+                        saisirNote(gestionnaire);
                         break;
                     case "4":
-                        AfficherReleveNotes(gestionnaire);
+                        afficherReleveNotes(gestionnaire);
                         break;
                     case "5":
-                        gestionnaire.EnregistrerDonnees();
+                        gestionnaire.enregistrerDonnees();
                         return;
                     default:
                         Console.WriteLine("Choix invalide. Veuillez réessayer.");
@@ -46,7 +46,7 @@ namespace Projet_AQL_UA3
             }
         }
 
-        static void AjouterEtudiant(GestionnaireNotes gestionnaire)
+        static void ajouterEtudiant(GestionnaireNotes gestionnaire)
         {
             Console.Write("Numéro d'étudiant: ");
             int numero = int.Parse(Console.ReadLine());
@@ -56,11 +56,11 @@ namespace Projet_AQL_UA3
             string prenom = Console.ReadLine();
 
             Etudiant etudiant = new Etudiant(numero, nom, prenom);
-            gestionnaire.AjouterEtudiant(etudiant);
+            gestionnaire.ajouterEtudiant(etudiant);
             Console.WriteLine("Étudiant ajouté avec succès.");
         }
 
-        static void AjouterCours(GestionnaireNotes gestionnaire)
+        static void ajouterCours(GestionnaireNotes gestionnaire)
         {
             Console.Write("Numéro du cours: ");
             int numero = int.Parse(Console.ReadLine());
@@ -70,11 +70,11 @@ namespace Projet_AQL_UA3
             string titre = Console.ReadLine();
 
             Cours cours = new Cours(numero, code, titre);
-            gestionnaire.AjouterCours(cours);
+            gestionnaire.ajouterCours(cours);
             Console.WriteLine("Cours ajouté avec succès.");
         }
 
-        static void SaisirNote(GestionnaireNotes gestionnaire)
+        static void saisirNote(GestionnaireNotes gestionnaire)
         {
             Console.Write("Numéro d'étudiant: ");
             int numeroEtudiant = int.Parse(Console.ReadLine());
@@ -84,15 +84,15 @@ namespace Projet_AQL_UA3
             double note = double.Parse(Console.ReadLine());
 
             Notes nouvelleNote = new Notes(numeroEtudiant, numeroCours, note);
-            gestionnaire.AjouterNote(nouvelleNote);
+            gestionnaire.ajouterNote(nouvelleNote);
             Console.WriteLine("Note enregistrée avec succès.");
         }
 
-        static void AfficherReleveNotes(GestionnaireNotes gestionnaire)
+        static void afficherReleveNotes(GestionnaireNotes gestionnaire)
         {
             Console.Write("Numéro d'étudiant: ");
             int numeroEtudiant = int.Parse(Console.ReadLine());
-            gestionnaire.AfficherReleveNotes(numeroEtudiant);
+            gestionnaire.afficherReleveNotes(numeroEtudiant);
         }
     }
 }
